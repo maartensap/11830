@@ -36,68 +36,55 @@
     <!-- Content -->
     <div class="container mt-5">
       <div class="content">
-# [11-830 Computational Ethics in NLP]()
-## **Spring 2023**
+# [11-830 Computational Ethics in NLP](./)
+## **Spring 2024**
 
 -----
-# HW 3: Design a Computational Ethics Homework Assignment
+# HW 3: Redteam an LLM
 
-- **Due 11:59pm, Friday 4/7.**
+- **Due 3/21 11:59pm.**
 - Submission: Submit a pdf of your write-up (titled `Lastname_Firstname_hw3.pdf`) to Canvas. 
 
 ------
 
 ## Goals
 
-This class is designed to get you thinking about the ethical implications of NLP and machine learning systems you build. Most NLP and CS students don’t take ethics classes; we want you to think about how you might share concepts you learned in this course even after it finishes. In this assignment, you will demonstrate this critical thinking by designing a homework assignment for the course. You do not have to *do* the project you describe, but just design it. The goal is to go beyond just modeling approaches and develop a framework for addressing/identifying who benefits or could be harmed from an NLP system, unintended consequences and biases of NLP systems, or using NLP to analyze injustices in society or for social good.
+Large language models (LLMs) are everywhere these days. The goal of this assignment is to (1) explore the limits of LLM safeguarding and (2) explain why LLMs are still capable of producing the undesirable output behavior you encountered.
 
 ------
 
 ## Overview
 
-We're turning the tables for this assignment: you are an instructor for this class and are designing a homework assignment for students. Again, you do not have to do the project you describe, but just design it.
+In this shorter assignment, you will qualitatively try to redteam (i.e., "break") an LLM's safeguarding mechanism, by getting it to produce some undesirable output. You will then have to explain why the output is undesirable and why the LLM might have produced the output.
 
 ------
 
 ## Requirements
 
-First, identify which unit in the course your assignment will be designed around. The units are:
-- Objectivity and bias
-- Civility in communication (including offensive language, hate speech, trolling)
-- Language of manipulation (including propaganda)
-- Privacy, profiling and security
-- NLP for social good
+- First, choose a popular closed- or open-source LLM, including ChatGPT, GPT-4, Mistral, Bard, BloomZ, etc. You can use online platforms, APIs, or even run LLMs locally; but note, the LLM has to be **recent** (updated or released in 2023 or later) and **large** (70B parameters or above).
+- Then, try to craft input prompts that will get the LLM to produce undesirable outputs. The definition of "undesirable" is up to you, but you do have to make a case that the outputs are somehow unethical, harmful, toxic, dangerous, etc. 
+- Finally, try to explain why the model produced such output, leaning on previous work.
 
-If you have an idea you're excited about that you feel fits into the class but aren’t sure which unit it might fit into, check with the instructors or TAs.
 
-Your assignment should include learning goals, an overview, specification of a dataset (that currently exists), illustrative examples from that dataset, basic requirements, and advanced analysis. For the goals and overview, think about what you want students to get out of your assignment (this is not trivial). The basic requirements should indicate a dataset and a baseline machine learning model or quantitative analysis. In advanced analysis, list one or more options for novel modeling or analysis, ideally that hasn’t been published before.
+**Write-up:** The assignment description should be maximum 4 pages in ACL format, `FirstName_LastName_hw3.pdf`. Please do not write more than 4 pages. Your proposed assignment write-up should include:
+- *Redteaming inputs & outputs*: what did you put into the model and what did the model produce? Please include screenshots or links to the outputs, as well as plain text versions of the inputs and outputs (e.g., using \texttt in Latex).
+- *Bias statement*: why is the output you obtained harmful, and what should the LLM have produced as output instead? What are the societal implications of LLMs being able to produce such output?
+- *Attempts*: please describe your process: how did you find the right input? What did you try before getting it right? What things didn't work? What papers did you consult while redteaming?
+- *Explanation*: why did the LLM produce this output? What prior work explains this behavior? What fundamental tension occured that caused the model to output undesirable content? 
 
-Your proposed assignment should be sufficiently different from existing assignments and projects in the course. It should also be simple enough to be completed by students in about the same amount of time that you spend on the homework assignments.
-
-For inspiration, look to past lectures (slides available on [Canvas](https://canvas.cmu.edu/courses/32412)), discussion papers (not limited to the ones assigned to you!), project ideas you considered but dropped for your class project (lots of relevant citations in the [project ideas lecture](https://canvas.cmu.edu/courses/32412/files/9114928?module_item_id=5399366)!), current events, and questions/tasks from your own field or area of expertise. Below are a few specific areas and datasets you can consider (remember to include examples from these datasets):
-
-- Fake news detection and fact-checking: [Fake News Challenge dataset](http://www.fakenewschallenge.org/), [another dataset](https://arxiv.org/abs/1708.07104), [social networks of fake news](https://aaai.org/ocs/index.php/ICWSM/ICWSM17/paper/view/15603/14812)
-- Cross-domain hate speech effectiveness with a dataset such as one at [SemEval 2019](https://competitions.codalab.org/competitions/19935)
-- Identifying microaggressions: [dataset/paper](https://www.aclweb.org/anthology/D19-1176.pdf)
-- Comments on TED talk videos labeled for gender of the commenter and gender of the presenter: [dataset/paper](https://www.aclweb.org/anthology/L18-1445.pdf)
-- AI2 indices of LLM datasets: [C4](https://c4-search.apps.allenai.org/), [ROOTS](https://huggingface.co/spaces/bigscience-data/roots-search), [LAION, C4, openwebtext, oscar, the pile and s2orc](https://jessedodge.github.io/elastic_search_demo.md)
-
-**Write-up:** The assignment description should be 1-2 pages in ACL format, `FirstName_LastName_hw3.pdf`. Please do not write more than 3 pages. Your proposed assignment write-up should include:
-
-- Goals for learning in the assignment
-- Overview
-- Basic requirements, including examples from the proposed dataset
-- Advanced analysis
-
-See the structure of the other homework assignments for guidance. You do not have to specify what you are looking for in a write-up or grading.
+## Advanced analysis: scaling up
+Instead of producing only *one* undesirable output with the LLM, scale up this redteaming, by either (choose only one):
+- Using your redteaming input and modifying it to produce at least 50 undesirable outputs. Note: both inputs and outputs have to all be different, but all the outputs have to be undesirable. *For the writeup*: include all the inputs and outputs, and explain what you had to do to scale up your efforts.
+- Use your redteaming strategy to "break" two other LLMs. Your inputs can be somewhat different, but you have to use the same redteaming strategy. For the writeup: include the new inputs and outputs, and explain why the redteaming strategy worked on other models and/or why you had to slightly modify the redteaming inputs.
 
 ------
 
 ## Grading (100 points)
-
-- 20 points - Submitting assignment
-- 60 points - Completing requirements
-- 20 points - Write-up is clear, presents meaningful engagement with the course topics, and contains all requested information.
+- 20 points for finding and including the input and undesirable output.
+- 20 points for the explanation of why the output is undesirable, what the LLM should have done instead, and what the societal implications are.
+- 20 points for explaining your attempts to get the undesirable output.
+- 20 points for explaining why the LLM produced such output.
+- 20 points for advanced analyses.
 
 
 </div>
