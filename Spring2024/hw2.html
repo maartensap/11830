@@ -94,22 +94,7 @@ Completing the basic requirements will earn a passing (B-range) grade
 
 **Test Set Predictions**
 
-- The file `test.tsv` contains a mix of data from the the TwitterAAE data set and the 2019 SemEval task. Use your model to make OFF/NOT predictions for the `test.tsv` samples, and place these predictions in a separate file titled FirstName_LastName_test.tsv. Offensiveness labels (OFF/NOT) should be in a column with the heading `label`. Please use tabs (`\t`) to separate columns.
-
-**Write-up**
-
-Submit a 2-3 page report (ACL format) titled `FirstName_LastName_hw2.pdf`. Please do not submit more than 4 pages. The report should include:
-
-- Results and discussion of your analysis of the PerspectiveAPI scores
-- Description of your offensiveness classifier
-- Results and discussion of your classifier over the dev sets
-- Description of your advanced analysis model and results over dev sets (if completed)
-- A brief (1 paragraph) discussion of the ethical implications of using machine learning to combat abusive language. This discussion should refer to your observations from this assignment as well as refer to issues discussed in class or drawn from additional references. Questions you might consider include:
-- How should we define offensive language?
-- What is the cost of misclassification? Who is negatively impacted by missclassification?
-- What are concerns around collecting and annotating training data?
-
-Be sure to cite all references.
+- The file `test.tsv` contains a mix of data from the the TwitterAAE data set and the 2019 SemEval task. Use your model to make OFF/NOT predictions for the `test.tsv` samples, and place these predictions in a separate file titled `FirstName_LastName_test.tsv`. Offensiveness labels (OFF/NOT) should be in a column with the heading `label`. Please use tabs (`\t`) to separate columns.
 
 ------
 
@@ -140,6 +125,23 @@ If you choose to improve FPR, you may wish to leverage the provided `demographic
 
 **Adapt to Gab** As a second option, you can explore how to adapt your classifier to a different data domain from Twitter and a slightly different task. [Kennedy et al., 2021](https://psyarxiv.com/hqjxn/) introduces a new annotation scheme for “hate-based rhetoric” including Human Degradation (HD), Calls for Violence (CV), Vulgar/offensive (VO). The Gab Hate Corpus (GHC) annotates posts from the website gab.com for these three categories (among other variables like targeted group/framing). Gab is commonly used by political extremists and the alt-right ([Andrews 2021](https://www.washingtonpost.com/technology/2021/01/11/gab-social-network/)), so that hate speech is more concentrated than on Twitter with a different distribution over topics/targeted groups. To investigate how well your model can do, you can select one or more of the hate-based rhetoric categories to evaluate on. Then, you can train a new classifier over the Gab training data to compare performance with the preliminary classifier. The Gab Hate Corpus also contains several variables for targeted populations/framing. It would be neat to look more closely at how performance differs over speech targeting different groups (e.g. political identity (POL), racial/ethnic identity (RAE)). Alternatively, you can also develop methods to adapt a model trained on Twitter assuming little or no training data from Gab. Dataset available [here](https://strubell.github.io/teaching/11-830/assignments/files/gab_data.tar.gz).
 
+---
+
+## Write-up
+
+Submit a 2-3 page report (ACL format) titled `FirstName_LastName_hw2.pdf`. Please do not submit more than 4 pages. The report should include:
+
+- Results and discussion of your analysis of the PerspectiveAPI scores
+- Description of your offensiveness classifier
+- Results and discussion of your classifier over the dev sets
+- Description of your advanced analysis model and results over dev sets (if completed)
+- A brief (1 paragraph) discussion of the ethical implications of using machine learning to combat abusive language. This discussion should refer to your observations from this assignment as well as refer to issues discussed in class or drawn from additional references (be sure to cite all references). Questions you might consider include:
+  - How should we define offensive language?
+  - What is the cost of misclassification? Who is negatively impacted by missclassification?
+  - What are concerns around collecting and annotating training data?
+
+*Note*: when describing the results, write the main findings out in English (e.g., "Model X achieves highest performance."). Then, discuss the results by explaining what the implications of your findings are (e.g., "Model X's high performance suggests that including feature Y helps in Task T") and drawing comparisons with other work (e.g., "this is corroborated by W et al 2022" or "this is in contrast to W et al 2022 who find that...").
+
 ------
 
 ## Grading (100 points)
@@ -154,7 +156,7 @@ If you choose to improve FPR, you may wish to leverage the provided `demographic
 
 ## Implementation Tips
 
-- You are welcome to use existing packages. Consider tools like nltk and gensim for text processing and tools like sklearn for constructing baseline classifiers.
+- You are welcome to use existing packages. Consider tools like nltk and gensim for text processing and tools like sklearn or huggingface for constructing baseline classifiers.
 
 ------
 
@@ -165,6 +167,7 @@ If you choose to improve FPR, you may wish to leverage the provided `demographic
 - Demographic Dialectal Variation in Social Media: A Case Study of African-American English. Su Lin Blodgett, Lisa Green, and Brendan O’Connor. Proceedings of EMNLP 2016.
 - Racial Bias in Hate Speech and Abusive Language Detection Datasets. Thomas Davidson, Debasmita Bhattacharya, and Ingmar Weber. Proceedings of Third Abusive Language Workshop at ACL 2019.
 - SemEval-2019 Task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval). Marcos Zampieri, Shervin Malmasi, Preslav Nakov, Sara Rosenthal, Noura Farra, and Ritesh Kumar. Proceedings of 13th International Workshop on Semantic Evaluation at NAACL 2019.
+
 </div>
      
 </body>

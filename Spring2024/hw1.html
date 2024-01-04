@@ -47,6 +47,7 @@
 
 
 # Goals
+
 Crowdsourcing annotations has become a fundamental aspect of NLP research. The goal of this assignment is to explore the ethical implications of soliciting crowdsourced data, specifically social biases that may emerge when asking for generated sentences.
 
 # Overview
@@ -64,13 +65,14 @@ After this analysis, you will present specific examples from the data that you s
 - [List of identity labels](https://strubell.github.io/teaching/11-830/assignments/files/identity_labels.txt) (based on [Rudinger et al. 2017](https://aclanthology.org/W17-1609/)).
 
 ----
+
 # Basic Requirements
 
 Completing the basic requirements will earn a passing (B-range) grade.
 
-**Word association analysis:** First, build a tool for calculating pointwise mutual information (PMI) between unigram frequencies in the SNLI dataset. Your tool should take a unigram, with word frequencies relative to a corpus, as input and give a list of other unigrams in the corpus ranked by PMI. Terms that occur less than 10 times in the corpus should not be considered; optionally you can consider other thresholds. For preprocessing, lowercase, remove stopwords and tokenize the data. Note that there are duplicate premises and hypotheses in the data; remove these and just look at unique utterances.
+**Word association analysis:** First, *build a tool for calculating pointwise mutual information (PMI) between unigram frequencies and identity terms in the SNLI dataset*. Your tool should take a unigram, with word frequencies relative to a corpus, as input and give a list of other unigrams in the corpus ranked by PMI. Terms that occur less than 10 times in the corpus should not be considered; optionally you can consider other thresholds. For preprocessing, lowercase, remove [stopwords](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/) and tokenize the data. Note that there are duplicate premises and hypotheses in the data; remove these and just look at unique utterances.
 
-Here’s how you can calculate PMI. Let $c(w_i)$ be the count of word wi in the corpus and $c(w_i,w_j)$ be the number of times that $w_i$ and $w_j$ occur in the same premise or hypothesis. If they co-occur more than once within a premise or hypothesis, you can still just calculate that as one. With $N$ as the number of documents (premises or hypotheses) in the corpus, we define $P(w_i)$ as the word frequency $c(w_i)/N$. Then PMI is:
+Here’s how you can calculate PMI. Let $c(w_i)$ be the count of word $w_i$ in the corpus and $c(w_i,w_j)$ be the number of times that $w_i$ and $w_j$ occur in the same premise or hypothesis. If they co-occur more than once within a premise or hypothesis, you can still just calculate that as one. With $N$ as the number of documents (premises or hypotheses) in the corpus, we define $P(w_i)$ as the word frequency $c(w_i)/N$. Then PMI is:
 
 $$PMI(w_i, w_j) = log_2 \frac{p(w_i, w_j)}{P(w_i)P(w_j)} = log_2\frac{N\cdot c(w_i, w_j)}{c(w_i)c(w_j)}$$
 
@@ -83,6 +85,7 @@ Calculate PMI separately for identity terms in the premises, which are the origi
 **Crowdsourcing set-up:** Read about what crowdworkers were asked to do in constructing the SNLI corpus in the SNLI paper. Come up with at least one idea about how the designers of the crowdsourcing task might have mitigated any social bias you found in your analysis. For example, are there certain topics that often led to biased hypotheses? Could the task have been structured differently or different instructions given to mitigate bias?
 
 -----
+
 # Advanced Analysis
 
 Choose one of the options below for advanced analysis.
@@ -118,7 +121,7 @@ Find and implement a recent approach for identifying biases in datasets. Summari
 
 Each student should submit their own 2-3 page report ([ACL format](https://www.overleaf.com/latex/templates/acl-rolling-review-template/jxbhdzhmcpdm)). Please do not submit more than 4 pages, though you can put large tables and figures in an appendix beyond that if necessary. The report should include:
 
-- The top 5 terms associated with 10 identity labels of your choice by PMI for both premises and hypotheses in the SNLI dataset (variations on the same lemma such as man and men count separately). These terms can indicate social biases you see or not.
+- The top 5 terms associated with 10 identity labels of your choice by PMI for both premises and hypotheses in the SNLI dataset (variations on the same lemma such as *man* and *men* count separately). These terms can indicate social biases you see or not.
 - A discussion of associations made in the SNLI dataset that are stereotypical, or a lack thereof. If you see any, discuss differences between premises and hypotheses regarding these stereotypes. Give specific examples of data where these associations are being made, and what potential harm that reinforcing this stereotype in a natural language inference dataset may have.
 - A brief discussion of what steps may be taken to mitigate this effect when using crowdsourcing to create and annotate NLP datasets. For example, what instructions could be given to crowdworkers, and more importantly, how might a crowdsource task be structured to elicit fewer stereotypes? Do you think asking for free-form generated sentences from crowdworkers will always produce responses that reproduce stereotypes, or are there ways to give context that may lessen that effect? How much of any bias that you see is due to the original premises provided to annotators?
 - [If doing advanced analysis] Results and discussion of advanced analysis.
