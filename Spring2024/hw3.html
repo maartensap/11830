@@ -61,21 +61,22 @@ In this shorter assignment, you will qualitatively try to redteam (i.e., "break"
 
 ## Requirements
 
-- First, choose a popular closed- or open-source LLM, including ChatGPT, GPT-4, Mistral, Bard, BloomZ, etc. You can use online platforms, APIs, or even run LLMs locally; but note, the LLM has to be **recent** (updated or released in 2023 or later) and **large** (70B parameters or above).
-- Then, try to craft input prompts that will get the LLM to produce undesirable outputs. The definition of "undesirable" is up to you, but you do have to make a case that the outputs are somehow unethical, harmful, toxic, dangerous, etc. 
+- First, choose a popular closed- or open-source LLM, including ChatGPT, GPT-4, Mistral, Bard, BloomZ, etc. You can use online platforms, APIs, or even run LLMs locally; but note, the LLM has to be **recent** (updated or released in 2023 or later), **large** (50B parameters or above), and have been aligned, RLHF-ed, or instruction tuned (i.e., you cannot use GPT-2, Llamma 1, etc.).
+- Then, manually craft 2 to 5 input prompts that will get the LLM to produce undesirable outputs. The definition of "undesirable" is up to you, but you do have to make a case that the outputs are somehow unethical, harmful, toxic, dangerous, etc. Note, "prompt" does not have to be a single turn prompt, this could be a prompting strategy (e.g., taking multiple turns before obtaining undesirable outputs).
 - Finally, try to explain why the model produced such output, leaning on previous work.
 
 
 **Write-up:** The assignment description should be maximum 4 pages in ACL format, `FirstName_LastName_hw3.pdf`. Please do not write more than 4 pages. Your proposed assignment write-up should include:
-- *Redteaming inputs & outputs*: what did you put into the model and what did the model produce? Please include screenshots or links to the outputs, as well as plain text versions of the inputs and outputs (e.g., using \texttt in Latex).
-- *Bias statement*: why is the output you obtained harmful, and what should the LLM have produced as output instead? What are the societal implications of LLMs being able to produce such output?
+- *Redteaming inputs, actual outputs, correct outputs*: what did you put into the model and what did the model produce? Please include screenshots or links to the outputs, as well as plain text versions of the inputs and outputs (e.g., using \texttt in Latex). For correct outputs, please write what the model should have output instead.
+- *Bias statement*: why is the output you obtained harmful, and what should the LLM's behavior be instead at a high level? What are the societal implications of LLMs being able to produce such output?
 - *Attempts*: please describe your process: how did you find the right input? What did you try before getting it right? What things didn't work? What papers did you consult while redteaming?
-- *Explanation*: why did the LLM produce this output? What prior work explains this behavior? What fundamental tension occured that caused the model to output undesirable content? 
+- *Explanation*: why did the LLM produce this output? What prior work explains this behavior? What fundamental tension between standard language modelling (i.e., predicting the most likely next word) and alignment (i.e., following instructions while being helpful and harmless) might have caused the model to output this undesirable content? Note, you do not need to do any more experiments (other than maybe some qualitative probing of the LLMs); if you want to do experiments, see advanced analyses.
 
 ## Advanced analysis: scaling up
-Instead of producing only *one* undesirable output with the LLM, scale up this redteaming, by either (choose only one):
-- Using your redteaming input and modifying it to produce at least 50 undesirable outputs. Note: both inputs and outputs have to all be different, but all the outputs have to be undesirable. *For the writeup*: include all the inputs and outputs, and explain what you had to do to scale up your efforts.
-- Use your redteaming strategy to "break" two other LLMs. Your inputs can be somewhat different, but you have to use the same redteaming strategy. For the writeup: include the new inputs and outputs, and explain why the redteaming strategy worked on other models and/or why you had to slightly modify the redteaming inputs.
+Choose one of the following option:
+- *Scale up outputs*: Using your redteaming input and modifying it to produce at least 50 undesirable outputs. Note: both inputs and outputs have to all be different, but all the outputs have to be undesirable. *For the writeup*: include all the inputs and outputs, and explain what you had to do to scale up your efforts.
+- *Scale up LLMs*: Use your redteaming strategy to "break" two other LLMs. Your inputs can be somewhat different, but you have to use the same redteaming strategy. For the writeup: include the new inputs and outputs, and explain why the redteaming strategy worked on other models and/or why you had to slightly modify the redteaming inputs.
+- *Scale up explanation*: Perform some quantitative experiments to investigate why the LLM produced your undesirable outputs. You can do this by analyzing RLHF models (e.g. [from OpenAssistant](https://huggingface.co/OpenAssistant/reward-model-deberta-v3-large-v2)) or pretraining data (e.g., [using WIMBD](https://github.com/allenai/wimbd)), performing quantitative counterfactual/contrastive input analyses (e.g., [using Polyjuice](https://arxiv.org/abs/2101.00288)), etc. Note: please do not spend too much time on this, as this could become an easy rabbithole to go down.
 
 ------
 
