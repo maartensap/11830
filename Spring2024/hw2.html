@@ -57,7 +57,7 @@ As we have discussed in class, abusive language on online platforms has become a
 
 In this assignment, you will explore an off-the-shelf toxicity classifier as well as build your own models. In general, you will evaluate models using two criteria: (1) performance over hate speech detection (Accuracy, Precision, Recall, and F1 Score for OFF and NOT classes; see [here](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html)) and (2) False Positive Rate (FPR), how often the model misclassifiers non-toxic speech as toxic (i.e., predicted as "OFF" but true label is "NOT"), specifically for comments associated with different demographic dialects. Poor performance over hate speech classification suggests that the model is not accurate enough to be useful, while poor or imbalanced FPR indicates that the model may impose racial biases.
 
-**Data**: The primary data for this assignment is available [here](files/HW2_civility_data.tar.gz) . **Please note that the data contains offensive or sensitive content, including profanity and racial slurs.**
+**Data**: The primary data for this assignment is available [here](/files/HW2_civility_data.tar.gz) . **Please note that the data contains offensive or sensitive content, including profanity and racial slurs.**
 
 We provide data drawn from two sources. The first (files `train.tsv` and `dev.tsv`) consists of tweets annotated for offensiveness taken from the [2019 SemEval task](https://competitions.codalab.org/competitions/20011) on offensive language detection. In the files `train.tsv` and `dev.tsv`, the first column (`text`) contains the text of a tweet, the second column (`label`) contains an offensiveness label:
 
