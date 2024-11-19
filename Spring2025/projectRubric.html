@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <!-- Metadata, OpenGraph and Schema.org -->
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LTI 11-830 Project Report and Presentation</title>
+    <meta name="author" content="Emma Strubell" />
+    <meta name="description" content="Computational Ethics for NLP" />
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website" />
+    <!-- Bootstrap & MDB -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <!-- Code Syntax Highlighting -->
+    <!--link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" /-->
+    <!-- Styles -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    
+    <!--converts Markdown to HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="main.css">
+</head>
+<!-- Body -->
+
+<body class="fixed-top-nav">
+    <!-- Content -->
+    <div class="container mt-5">
+      <div class="content">
+# [LTI 11-830 Ethics, Safety, and Social Impact in NLP and LLMs (Spring 2025)](./)
+## **Spring 2025**
+
+-----
+<div id="midterm">
+
+## Mid-term project checkins
+| Requirements                | Total Marks                               | Description                                                  | Suggested Time  |
+| --------------------------- | ----------------------------------------- | ------------------------------------------------------------ | --------------- |
+| Introduction and Motivation | 5                                         | What problem are you trying to tackle? Why is it an important problem? Give examples to ground the problem | 1.5-2 minutes   |
+| Bias Statement              | (*Only required for some, -2 if missing*) | If you are discussing/tackling/mitigating/quantifying some sort of bias, tell us why a statistical skew in the data is a problem or is harmful, and specify what the "ideal" unbiased data distribution would look like, in your opinion. (Should be included in the motivation framework itself) |                 |
+| Related Work                | 2                                         | How has previous work tried to tackle this issue? Alternately what previous work do you build upon to addeess this issue |                 |
+| Datasets                    | 3                                         | What dataset(s) did you use or do you plan to use? Can you provide concete examples of the problem you are investigating from your dataset? | 1-1.5 minutes   |
+| Preliminary Results         | 3                                         | What experiments did you use for the current problem? What are some findings of your preliminary analysis or experimentation? [These are expected to be largely negative or incomplete. We want to ensure that you have a thorough understanding of your project by now and are able to estimate how much is feasible and accomplishable by the end of the course. ] |                 |
+| Proposed Work               | 5                                         | How do you plan to move ahead with your current analysis or findings? What is your proposed approach? Be succinct but specific. Also what are the possible timelines for the remainder of the experiments? | 1-1.5 minutes   |
+| Presentation: Slides        | 2                                         | How well were the slides prepared? This is in terms of understandability as well as visuals. See [presentation tips in the project rubric](https://maartensap.com/11830/Spring2024/projectRubric.html#tips) for more info. |                 |
+| **Total**                   | **20**                                    |                                                              | **4-5 minutes** |
+
+
+</div>
+
+------
+
+<div id="final-report">
+
+## Final Project Report
+
+You should view the report as practice writing a research publication for submission to an NLP conference. Your report should be no longer than 8 pages written in the style of a conference paper in [ARR format](https://github.com/acl-org/acl-style-files), with an abstract, introduction motivating the task and summarizing your methods and results, a related work section, detailed methods section, and experimental results and/or analysis with a discussion of interesting take-aways from those results. 
+
+Reports should not be a journal of all the experiments you tried; instead, the reports should be self-contained and understandable, explaining to a new reader who is not familiar with your work what exactly you ended up finding. Feel free to include failed experiments, side investigations, personal notes, etc. in the appendix.
+
+If you’re not sure how to do this, refer to papers that we discussed in class and/or related work as examples. For tips on clear scientific writing, you may find [this article](https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing) and [this paper](https://faculty.washington.edu/wobbrock/pubs/Wobbrock-2015.pdf) helpful.
+
+### Grading (20 points)
+- **Abstract** (1 point): What did you do, what method did you use, what were the most important findings, and what are the implications of your work? Should not be more than 250-300 words, and should be to-the-point and clear to any reader unfamiliar with your work.
+- **Motivation** (2 points): Why does what you're doing matter, in the field and/or the world? What challenge are you tackling that others have not yet addressed; why hasn’t this problem been solved yet? It should be clear how the project is connected to ethics + NLP. Make sure to cite evidence for any claims you make!
+- **Task definition & problem setup** (3 points): How are you defining the problem more specifically? For example, what are the inputs and outputs? What data are you using for training and/or evaluation, and what metrics are you using for evaluation? Justify all of the above decisions.
+- **Bias statement** (-1 if not present): If you are discussing/tackling/mitigating/quantifying some sort of bias, tell us why a statistical skew in the data is a problem or is harmful, and specify what the "ideal" unbiased data distribution would look like, in your opinion. See [this guide](https://genderbiasnlp.talp.cat/gebnlp2020/how-to-write-a-bias-statement/) on how to write a bias statement. This should be included in the introduction of the paper (e.g., using `\paragraph{Bias Statement}`).
+- **Related work** (2 points): A clear and comprehensive review of related work. You should make sure to clarify not just what others did, but compare and contrast their work to yours. Including just a couple papers that correspond to the most closely related baselines is insufficient. Please note, related work is only meant to include work that is tackling similar high-level problems as your work. Work that you merely used but whose task is not related to yours doesn't need to be included (e.g., if you're using a parser to preprocess your data, you don't need a subsection about parsing in your related work).
+- **Methods & experiments** (3 points): Describe in detail your methodology for tackling the problem outlined in your answers to the above questions. You should justify your methodological and design decisions – why do you hypothesize that your approach makes sense for your specific task definition and problem setup, compared to existing or baseline approaches? 
+- **Main results** (1 point): Describe your main results (including intuitive figures and tables), summarize the tables/charts (highlighting key takeaways), note which approach worked best/worst?
+- **Discussion, including key challenges, insights, and future work** (2 points): 
+  - Discuss and analyze whether/why your approach was a good/bad idea in retrospect, now that you have the results. Use error analyses to support this discussion.
+  - Tie your results in with what was previously known about your problem, and/or what was discussed in class. Does previous work confirm or contradict your results? Was there anything unexpected about the results or findings? Why (use citations)? 
+  - What key challenges did you face? What future work might be inspired by your results?
+- **Limitations** (1 point): What are the limitations of your work? Refer to the [ARR Responsible NLP Research checklist](https://aclrollingreview.org/responsibleNLPresearch/).
+- **Report write-up quality** (5 points): Report is well-written and organized, with minimal typos and formatting mistakes, and discussion of all requested topics are easy to find. Tables and figures are readable and well-labeled with informative captions. Your results should be easily reproducible from the details included in your report. Refer to the [ARR Responsible NLP Research checklist](https://aclrollingreview.org/responsibleNLPresearch/). Report is submitted on time.
+
+</div>
+
+-----
+
+<div id="final-presentation">
+
+## Final Project Presentation
+
+The goal of the final project presentation is to practice clearly communicating research results to a diverse audience with related interests and expertise. You will have 7-8 minutes to present your final project to the rest of the class, with 3-4 minutes for questions. Students are coming from a variety of backgrounds, and you should describe your project in a way that is easily understandable by everyone in the class. Each member of the team should be present and should contribute equally to the presentation. Each of the items below must not only be present in the presentation, but should also be clearly and concisely communicated in order to receive full credit.
+
+
+### Grading (20 points)
+
+Presentation content (14 points)
+- Introduction / problem description (2 points): What problem are you trying to tackle? What are examples of the phenomenon you're describing? This should be succinct and typically at the beginning of the presentation.
+- Motivation (3 points): Why is this an important problem? Why hasn't this been solved yet? This should describe the impact/harms of the problem not currently being solved, as well as the potential impact/benefits of the problem being solved.
+- Bias statement (-1 if not present): If you are discussing/tackling/mitigating/quantifying some sort of bias, tell us why a statistical skew in the data is a problem or is harmful, and specify what the "ideal" unbiased data distribution would look like, in your opinion. See this guide on how to write a [bias statement](https://genderbiasnlp.talp.cat/gebnlp2020/how-to-write-a-bias-statement/). 
+- Related work (1 point): how has previous work tried to tackle this issue? Why did others not solve this? What background knowledge should the audience have to understand your presentation?
+- Datasets (1 point): What dataset(s) did you use? What do the data look like?
+- Method & Experiments [1 point]: How did you tackle your problem? What analysis method did you use? What neural model did you use? How did you set up your experiments?
+- Results (2 points): What were the results from your experiments? What are the key takeaways?
+- Analyses and errors (2 points): What are some interesting findings that you did not necessarily expect? What were some error patterns of your approach?
+- Future work & limitations (2 points): What remains to be done in order to tackle your broader problem from the introduction? What are some limitations that your work has that future work should address? What are fundamental assumptions or limitations that you made in your work? 
+
+Presentation quality (6 points)
+- Q&A (1 point): How well did you answer questions about your work?
+- Slide deck quality (1 point): how visually engaging was the slide deck? Were there many tables used that could have been bar charts? Were chart axes labeled and in a reasonable range? Were slides not too wordy? Was animation used judiciously?
+- Novel vs. previous work delineation (1 point): Was it clear what was novel work vs. what was work done previously? Was previous work cited and attributed correctly?
+- Presentation submitted on time (1 point): Google slides link uploaded to Canvas by the requested deadline with no updates at the last minute before the presentation.
+- Presentation quality (1 point; _individual_): How eloquent was the presentation? How smooth was the transition from one slide to the next? Did the presentation feel unrehearsed?
+- Question to another team (1 point; _individual_): Ask a question of another team during Q&A. The question should be thoughtful and indicate that you paid attention to the presentation.
+
+</div> 
+
+------
+
+<div id="tips">
+
+## Presentation Tips, Do's and Don'ts
+
+Here are some general tips for presenting your research better, though some of these may not apply to your project.
+
+### Introduction
+
+- Assume an adversarial crowd - assume they don't care about your project
+- Motivate your project by explaining: why it matters, what real-world problem it might solve, etc.
+- Reel people in using a captivating example! Simplify your task and walk through an example so people really understand. High level data descriptions don't give the listener a concrete idea of the data we're looking at. Caveat: make sure the example is short; people shouldn't be reading for more than 10-15 seconds.
+
+### Data description
+
+- Include interesting examples if it's data that people are unfamiliar with or if the data has interesting properties
+- Include data statistics (with numbers and/or graphs)
+
+### Methodology
+
+- Diagrams, flowcharts, drawings are much better than text
+  Often it takes a while to come up with a good visualization for your model, but it can create much more lasting impression than 5 equations.
+- Keep equations at a minimum (and don't put more than 1 or 2 equations in one slide)
+- Also, using animation as you explain your models or algorithmic procedures can help people follow along as you are talking.
+- Use intuitive labels or icons.
+  - If it's a vector, draw a narrow vertical rectangle
+  - Use logos or cliparts for articles, stories, people, etc.
+
+### Experimental Set-Up
+
+- Include what the train/dev/test split is.
+- Include what objective function you are optimizing and what metrics you will be evaluating
+
+### Results
+
+- Make visuals (tables and graphs) easy to follow with a clear takeaway message.  Audiences should be able to look at tables and draw conclusions without having to interpret them on their own. You can also use bold font to make the best performing models more clear in tables.
+- Prefer graphs/other types of visualizations over tables.
+  Check out these tips for data viz: [http://guides.library.duke.edu/datavis/topten](https://www.google.com/url?q=http://guides.library.duke.edu/datavis/topten&sa=D&ust=1531730806395000)
+- Make sure to title and label tables/axis/legends correctly.
+- Limit significant figures! p= 0.35 is much more legible than p = 0.346749362.
+- Include short takeaways from results (plots/tables)
+- Tell the audience what an ideal plot would look like to help understand the plot
+
+### General tips
+
+- Limit the number of words per slide as much as you can
+  Try writing out what you want to say first, then replace words with graphs/images/icons.
+- Rehearse your talk fully at least once, it helps debug structural and technical issues and helps you figure out how you're doing on the time limit.
+  This is especially helpful if you're co-presenting
+- Make sure you look up at the audience and not your slides (especially if those are behind you). Using speaker notes is fine but make sure you're not reading them out loud.
+- If you're pointing at something in the slide, try to highlight it either using a laser pointer or using animations (fade, red circles, etc).
+- Content warning: if you're tackling a problem space that contains sensitive topics, offensive language, etc. please use a content warning, and refrain from using actual examples (e.g., use emojis or blurred out text instead). ***Refrain from using slurs*** out loud or in your slides (e.g., f*g, f*ggot, n***er, b*tch, n*gga, etc). Remember to keep your audience's well being in mind.
+</div>
+------
+
+</div>
+     
+</body>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<!-- Medium Zoom JS -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+
+<!-- MathJax -->
+<script type="text/javascript">
+    window.MathJax = {
+        tex: {
+          tags: 'ams'
+        }
+      };
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+  };
+</script>
+<script>
+   //document.getElementById('content').innerHTML =
+    // marked.parse(document.getElementById('content').innerHTML);
+   //$("#content").html(marked.parse($("#content").html()));
+   $(".content").each(function (i,e){e.innerHTML = marked.parse(e.innerHTML)})
+
+</script>
+
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<style>
+  picture>img {
+    /*max-width: 200px;*/
+  }
+</style>
+</html>
