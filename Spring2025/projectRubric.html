@@ -23,12 +23,13 @@
     <!--link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" /-->
     <!-- Styles -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
-    
+
     <!--converts Markdown to HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-    
-    <link rel="stylesheet" href="main.css">
+
+
+​    
+​    <link rel="stylesheet" href="main.css">
 </head>
 <!-- Body -->
 
@@ -38,6 +39,88 @@
       <div class="content">
 # [LTI 11-830 Ethics, Safety, and Social Impact in NLP and LLMs (Spring 2025)](./)
 ## **Spring 2025**
+
+<div id="pre-proposal">
+
+### Project pre-proposal
+The goal of the preproposals is to run three project ideas by the instructors to get their feedback, and to form project teams.
+
+#### Instructions
+
+You will pick three project ideas and flesh them out, in a 1-2 paragraph describing the focus area of the project along with quick-and-dirty method descriptions and stretch goals. 
+
+For each project direction, outline the following:
+
+1. **Project Description**:
+   - **Focus Area**: Clearly state the topic area of each project, drawing from the topic areas in the course.
+   - **Motivation**: Explain why this project is important or interesting. What problem does it aim to solve or what opportunity does it seek to explore?
+   - **Project Idea**: Describe what you intend to do. Provide a brief overview of the project concept.
+2. **Methods and Approaches**:
+   - **First-Attempt Methods**: Outline the initial methods or approaches you plan to use to achieve your project goals.
+   - **Stretch Goals**: Identify any additional goals or advanced methods you might pursue if time and resources allow.
+3. **Data Sources**:
+   - List potential data sources you will use for your project. This could include databases, APIs, surveys, experiments, etc.
+4. **Evaluation and Success Measures**:
+   - Define how you will evaluate the success of your project. What metrics or criteria will you use to measure progress and outcomes?
+
+#### Submission
+
+Submit a 2-3 page PDF file (excluding references) compiled using the [ACL Rolling review format](https://github.com/acl-org/acl-style-files). Only one of the team members needs to submit.
+
+</div>
+
+### Project proposal
+
+Pick a project and prepare a 2-3 page document following the [ACL Rolling review format](https://github.com/acl-org/acl-style-files). Your document should include the following sections:
+
+#### Instructions for write up
+
+1. **Working title of project**
+2. **Introduction**:
+   - Provide a brief overview of your project.
+   - Clearly state the problem you are addressing.
+   - Explain the significance and motivation behind your project.
+3. **Related Work**:
+   - Conduct a literature review of existing work related to your project.
+   - Summarize key findings (what has already been done) and highlight gaps that your project aims to fill (what issues or challenges remain).
+   - Cite relevant papers and sources.
+4. **Data**:
+   - Describe the data you will use for your project.
+   - Include details about data sources, data collection methods, and any preprocessing steps.
+   - For data collection (e.g., surveys) projects, explain where and how you'd recruit your participants or where you'd obtain your data.
+5. **Proposed Initial Approach**:
+   - Outline your proposed initial method or approach for solving the problem.
+   - Include details about the models, algorithms, or techniques you plan to use.
+   - Include appropriate baselines or ablations that you will use as a comparison point.
+   - For data collection (e.g., surveys) projects, describe how you would collect a preliminary round of data, including listing questions to ask, etc. 
+6. **Stretch goals and final models**:
+   - Outline your proposed final method or approach for solving the problem.
+   - Clearly outline how this differs from the initial approach.
+   - Explain why these baselines are appropriate for your project.
+   - For data collection (e.g., surveys) projects, describe how you would collect a large-scale round of data, including listing questions to ask, etc. 
+
+#### Submissions
+
+- Please submit a 2-3 page document following the ACL Rolling Review format.
+- Only one group member needs to submit this assignment.
+- Upload your proposal as a PDF.
+- Include the AndrewIDs of your group members in the comment section of the submission.
+
+
+
+Pick a project: 
+
+A 2-3 page document ([ACL Rolling review format](https://github.com/acl-org/acl-style-files)) containing a literature review, concrete problem definition, identification of baseline models, and ideas for final models. 
+
+#### Instructions
+
+[Todo, flesh out instructions. Sections should include Introduction, Related Work, Data, Baseline, Proposed Approach. Baselines should be clearly defined but do not need to be implemented yet.]
+
+ #### Submissions
+
+Please submit a 2-3 page document ([ACL Rolling review format](https://github.com/acl-org/acl-style-files)). Only one group member needs to submit this assignment. Please upload your proposal as a PDF, and include the AndrewIDs of your group members in the comment.
+
+
 
 -----
 <div id="midterm">
@@ -70,18 +153,30 @@ Reports should not be a journal of all the experiments you tried; instead, the r
 If you’re not sure how to do this, refer to papers that we discussed in class and/or related work as examples. For tips on clear scientific writing, you may find [this article](https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing) and [this paper](https://faculty.washington.edu/wobbrock/pubs/Wobbrock-2015.pdf) helpful.
 
 ### Grading (20 points)
+
+Note, the rubric on Canvas is scaled to be 120 points.
+
 - **Abstract** (1 point): What did you do, what method did you use, what were the most important findings, and what are the implications of your work? Should not be more than 250-300 words, and should be to-the-point and clear to any reader unfamiliar with your work.
-- **Motivation** (2 points): Why does what you're doing matter, in the field and/or the world? What challenge are you tackling that others have not yet addressed; why hasn’t this problem been solved yet? It should be clear how the project is connected to ethics + NLP. Make sure to cite evidence for any claims you make!
-- **Task definition & problem setup** (3 points): How are you defining the problem more specifically? For example, what are the inputs and outputs? What data are you using for training and/or evaluation, and what metrics are you using for evaluation? Justify all of the above decisions.
-- **Bias statement** (-1 if not present): If you are discussing/tackling/mitigating/quantifying some sort of bias, tell us why a statistical skew in the data is a problem or is harmful, and specify what the "ideal" unbiased data distribution would look like, in your opinion. See [this guide](https://genderbiasnlp.talp.cat/gebnlp2020/how-to-write-a-bias-statement/) on how to write a bias statement. This should be included in the introduction of the paper (e.g., using `\paragraph{Bias Statement}`).
-- **Related work** (2 points): A clear and comprehensive review of related work. You should make sure to clarify not just what others did, but compare and contrast their work to yours. Including just a couple papers that correspond to the most closely related baselines is insufficient. Please note, related work is only meant to include work that is tackling similar high-level problems as your work. Work that you merely used but whose task is not related to yours doesn't need to be included (e.g., if you're using a parser to preprocess your data, you don't need a subsection about parsing in your related work).
-- **Methods & experiments** (3 points): Describe in detail your methodology for tackling the problem outlined in your answers to the above questions. You should justify your methodological and design decisions – why do you hypothesize that your approach makes sense for your specific task definition and problem setup, compared to existing or baseline approaches? 
-- **Main results** (1 point): Describe your main results (including intuitive figures and tables), summarize the tables/charts (highlighting key takeaways), note which approach worked best/worst?
-- **Discussion, including key challenges, insights, and future work** (2 points): 
-  - Discuss and analyze whether/why your approach was a good/bad idea in retrospect, now that you have the results. Use error analyses to support this discussion.
-  - Tie your results in with what was previously known about your problem, and/or what was discussed in class. Does previous work confirm or contradict your results? Was there anything unexpected about the results or findings? Why (use citations)? 
-  - What key challenges did you face? What future work might be inspired by your results?
-- **Limitations** (1 point): What are the limitations of your work? Refer to the [ARR Responsible NLP Research checklist](https://aclrollingreview.org/responsibleNLPresearch/).
+- **Introduction section**:
+  - **Motivation** (2 points): Why does what you're doing matter, in the field and/or the world? What challenge are you tackling that others have not yet addressed; why hasn’t this problem been solved yet? It should be clear how the project is connected to ethics + NLP. Make sure to cite evidence for any claims you make!
+  - **Thesis statement** (1 point): In a succinct way, what problem are you tackling and what are you doing in the project? This should be present clearly in the introduction.
+  - **Bias statement** (-1 if not present): If you are discussing/tackling/mitigating/quantifying some sort of bias, tell us why a statistical skew in the data is a problem or is harmful, and specify what the "ideal" unbiased data distribution would look like, in your opinion. See [this guide](https://genderbiasnlp.talp.cat/gebnlp2020/how-to-write-a-bias-statement/) on how to write a bias statement. This should be included in the introduction of the paper (e.g., using `\paragraph{Bias Statement}`).
+
+- **Related work section** (2 points): A clear and comprehensive review of related work. You should make sure to clarify not just what others did, but compare and contrast their work to yours. Including just a couple papers that correspond to the most closely related baselines is insufficient.
+  - Please note, related work is only meant to include work that is tackling similar high-level problems as your work. Work that you merely used but whose task is not related to yours doesn't need to be included (e.g., if you're using a tokenizer just to preprocess your data, you don't need a subsection about tokenization in your related work).
+
+- **Methods section**:
+  - **Task definition** (1 point): Clearly define the task you are aiming to accomplish. For model improvement or system design projects, this means describing the inputs and outputs, labels, etc. For analyses projects, this means describing the tasks or models that you're analyzing and with respect to what dimensions you're analyzing things. For data collection or survey type projects, this means describing the phenomenon you want to capture or collect.
+  - **Evaluation / Success Measure** (1 point):  Describe the criteria and metrics you will use to evaluate the success of your project. This could include quantitative measures such as accuracy, precision, recall, and F1 score, as well as qualitative assessments like user feedback or ethical impact. For analyses-oriented projects, this could be verifications that your ways to measure things actually measure the phenomenon you want. For data collection or surveys, this could be annotator agreement, number of data points collected, statistical significance tests, etc. Explain why these measures are appropriate and valid for your task and how they will help you determine the effectiveness of your approach.
+  - **Method implementation, datasets used, and experimental setups** (2 points): Provide a detailed description of the methods, datasets, and algorithms you used in your project. This could include the architecture of any models, the training process, any preprocessing steps, and the datasets used. For data collection or survey-oriented projects, this could mean how you actually collected the data, what the low-level questions were, etc. In the appendix, include any prompts you used, model hyperparameters, the hardware and software environment, screenshots of crowdsourcing tasks, etc.
+
+- **Main results** (1 point): Describe your main results (including intuitive figures and tables), summarize the tables/charts (highlighting key takeaways), note which approach worked best/worst. For analysis-oriented results, note what your analyses found. For system design or data collection projects, show prototypes or small-scale pilot studies.
+- **Discussion & insights** (2 points):
+  - Discuss and analyze whether/why your approach was a good/bad idea in retrospect, now that you have the results. Use both quantitative and/or qualitative error analyses to support this discussion. 
+  - Tie your results in with what was previously known about your problem, and/or what was discussed in class. Does previous work confirm or contradict your results? Was there anything unexpected about the results or findings? Why? Make sure to use citations? 
+
+- **Limitations** (1 point): What are the limitations of your work? E.g., what types of assumptions did your investigations make that might restrict the applicability of your approach? What key challenges did you face?
+- **Conclusion & Future work** (1 point): Conclude your work (1-2 paragraphs) and describe what future work remains to be done (2-3 paragraphs). Any future work should be motivated for why it is necessary (e.g., avoid simply saying "Future work should explore other languages." but instead explain why exploring other languages is important).
 - **Report write-up quality** (5 points): Report is well-written and organized, with minimal typos and formatting mistakes, and discussion of all requested topics are easy to find. Tables and figures are readable and well-labeled with informative captions. Your results should be easily reproducible from the details included in your report. Refer to the [ARR Responsible NLP Research checklist](https://aclrollingreview.org/responsibleNLPresearch/). Report is submitted on time.
 
 </div>
@@ -98,23 +193,23 @@ The goal of the final project presentation is to practice clearly communicating 
 ### Grading (20 points)
 
 Presentation content (14 points)
-- Introduction / problem description (2 points): What problem are you trying to tackle? What are examples of the phenomenon you're describing? This should be succinct and typically at the beginning of the presentation.
-- Motivation (3 points): Why is this an important problem? Why hasn't this been solved yet? This should describe the impact/harms of the problem not currently being solved, as well as the potential impact/benefits of the problem being solved.
-- Bias statement (-1 if not present): If you are discussing/tackling/mitigating/quantifying some sort of bias, tell us why a statistical skew in the data is a problem or is harmful, and specify what the "ideal" unbiased data distribution would look like, in your opinion. See this guide on how to write a [bias statement](https://genderbiasnlp.talp.cat/gebnlp2020/how-to-write-a-bias-statement/). 
-- Related work (1 point): how has previous work tried to tackle this issue? Why did others not solve this? What background knowledge should the audience have to understand your presentation?
-- Datasets (1 point): What dataset(s) did you use? What do the data look like?
-- Method & Experiments [1 point]: How did you tackle your problem? What analysis method did you use? What neural model did you use? How did you set up your experiments?
-- Results (2 points): What were the results from your experiments? What are the key takeaways?
-- Analyses and errors (2 points): What are some interesting findings that you did not necessarily expect? What were some error patterns of your approach?
-- Future work & limitations (2 points): What remains to be done in order to tackle your broader problem from the introduction? What are some limitations that your work has that future work should address? What are fundamental assumptions or limitations that you made in your work? 
+- **Introduction / problem description** (2 points): What problem are you trying to tackle? What are examples of the phenomenon you're describing? This should be succinct and typically at the beginning of the presentation.
+- **Motivation** (3 points): Why is this an important problem? Why hasn't this been solved yet? This should describe the impact/harms of the problem not currently being solved, as well as the potential impact/benefits of the problem being solved.
+- **Bias statement** (-1 if not present): If you are discussing/tackling/mitigating/quantifying some sort of bias, tell us why a statistical skew in the data is a problem or is harmful, and specify what the "ideal" unbiased data distribution would look like, in your opinion. See this guide on how to write a [bias statement](https://genderbiasnlp.talp.cat/gebnlp2020/how-to-write-a-bias-statement/). 
+- **Related work** (1 point): how has previous work tried to tackle this issue? Why did others not solve this? What background knowledge should the audience have to understand your presentation?
+- **Datasets** (1 point): What dataset(s) did you use? What do the data look like?
+- **Method & Experiments** (1 point): How did you tackle your problem? What analysis method did you use? What neural model did you use? How did you set up your experiments?
+- **Results** (2 points): What were the results from your experiments? What are the key takeaways?
+- **Analyses and errors** (2 points): What are some interesting findings that you did not necessarily expect? What were some error patterns of your approach?
+- **Conclusion, Future work, and limitations** (2 points): In brief, what did you do and what did you find? What remains to be done in order to tackle your broader problem from the introduction? What are some limitations that your work has that future work should address? What are fundamental assumptions or limitations that you made in your work? 
 
 Presentation quality (6 points)
-- Q&A (1 point): How well did you answer questions about your work?
-- Slide deck quality (1 point): how visually engaging was the slide deck? Were there many tables used that could have been bar charts? Were chart axes labeled and in a reasonable range? Were slides not too wordy? Was animation used judiciously?
-- Novel vs. previous work delineation (1 point): Was it clear what was novel work vs. what was work done previously? Was previous work cited and attributed correctly?
-- Presentation submitted on time (1 point): Google slides link uploaded to Canvas by the requested deadline with no updates at the last minute before the presentation.
-- Presentation quality (1 point; _individual_): How eloquent was the presentation? How smooth was the transition from one slide to the next? Did the presentation feel unrehearsed?
-- Question to another team (1 point; _individual_): Ask a question of another team during Q&A. The question should be thoughtful and indicate that you paid attention to the presentation.
+- **Q&A** (1 point): How well did you answer questions about your work? Did you engage with the question asker? If there's something you didn't know, did you still try to hypothesize or give a related answer?
+- **Slide deck quality** (1 point): how visually engaging was the slide deck? Were there many tables used that could have been bar charts? Were chart axes labeled and in a reasonable range? Were slides not too wordy? Was animation used judiciously?
+- **Novel vs. previous work delineation** (1 point): Was it clear what was novel work vs. what was work done previously? Was previous work cited and attributed correctly?
+- **Presentation submitted on time** (1 point): Google slides link uploaded to Canvas by the requested deadline with no updates at the last minute before the presentation.
+- **Presentation quality** (1 point; _individual_): How eloquent was the presentation? How smooth was the transition from one slide to the next? Did the presentation feel unrehearsed? Did you let other teammates speak and answer questions equitably?
+- **Question to another team** (1 point; _individual_): Ask a question of another team during Q&A. The question should be thoughtful and indicate that you paid attention to the presentation.
 
 </div> 
 
