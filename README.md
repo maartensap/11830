@@ -1,4 +1,4 @@
-# LTI 11-830 Ethics, Safety, and Social Impact in NLP and LLMs
+# LTI 11-430/830 Ethics, Safety, and Social Impact in NLP and LLMs
 Please find the course links for previous and current course offerings:
 - [Spring 2027](./Spring2027)
 - [Spring 2026](./Spring2026)
